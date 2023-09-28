@@ -60,4 +60,14 @@ body {
     border-radius: 10px;
     border-bottom: black solid 5px;
     border-right: black solid 5px;
+    transition: 0.2s all ease;
+}
+
+.player.container-option:hover {
+    transform: translate(2%, -2%);
+}
+
+.player.container-option:active {
+    transform: translate(3%, -3%);
+    box-shadow: 3px 3px black;
 }
