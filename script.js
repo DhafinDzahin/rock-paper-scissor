@@ -69,11 +69,11 @@ function endGame() {
 
     if (playerScore > computerScore) {
         winnerAnnouncement.textContent = 'PLAYER WIN';
-        winnerImage.src = "/image/player.png";
+        winnerImage.src = "image/player.png";
     }
     else {
         winnerAnnouncement.textContent = 'COMPUTER WIN';
-        winnerImage.src = "/image/computer.png";
+        winnerImage.src = "image/computer.png";
     }
 }
 
