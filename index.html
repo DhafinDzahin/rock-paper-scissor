@@ -9,64 +9,75 @@
         <link rel="stylesheet" href="style.css">
     </head>
 
+
     <body>
-        <div class="container-title flex">
-            <h1>rock paper scissors</h1>
-            <h1>First to 5 win!</h1>
-        </div>
+        <div id="game-screen">
+            <div class="container-title flex">
+                <h1>rock paper scissors</h1>
+                <h1>First to 5 win!</h1>
+            </div>
 
-        <div class="flex container-game">
-            <div class="flex container-character">
-                <h1>PLAYER</h1>
-                <img src="/image/player.png" alt="" class="character">
-                <!-- <a href="https://www.flaticon.com/free-icons/headset" title="headset icons">Headset icons created by Freepik - Flaticon</a> -->
-                <h1 id="playerScore">0</h1>
+            <div class="flex container-game">
+                <div class="flex container-character">
+                    <h1>PLAYER</h1>
+                    <img src="/image/player.png" alt="" class="character">
+                    <!-- <a href="https://www.flaticon.com/free-icons/headset" title="headset icons">Headset icons created by Freepik - Flaticon</a> -->
+                    <h1 id="playerScore">0</h1>
 
-                <div class="flex container-pick">
-                    <div class="flex container-option player">
-                        <h1>rock</h1>
-                        <img src="/image/rock.png" alt="" class="character">
-                        <!-- <a href="https://www.flaticon.com/free-icons/rock" title="rock icons">Rock icons created by Nadiinko - Flaticon</a> -->
+                    <div class="flex container-pick" id="player-choice">
+                        <div class="flex container-option player" id="rock">
+                            <h1>rock</h1>
+                            <img src="/image/rock.png" alt="" class="character">
+                            <!-- <a href="https://www.flaticon.com/free-icons/rock" title="rock icons">Rock icons created by Nadiinko - Flaticon</a> -->
+                        </div>
+                        <div class="flex container-option player" id="paper">
+                            <h1>paper</h1>
+                            <img src="/image/paper.png" alt="" class="character">
+                            <!-- <a href="https://www.flaticon.com/free-icons/paper" title="paper icons">Paper icons created by Freepik - Flaticon</a> -->
+                        </div>
+                        <div class="flex container-option player" id="scissor">
+                            <h1>scissor</h1>
+                            <img src="/image/scissor.png" alt="" class="character">
+                            <!-- <a href="https://www.flaticon.com/free-icons/scissor" title="scissor icons">Scissor icons created by Freepik - Flaticon</a> -->
+                        </div>
                     </div>
-                    <div class="flex container-option player">
-                        <h1>paper</h1>
-                        <img src="/image/paper.png" alt="" class="character">
-                        <!-- <a href="https://www.flaticon.com/free-icons/paper" title="paper icons">Paper icons created by Freepik - Flaticon</a> -->
-                    </div>
-                    <div class="flex container-option player">
-                        <h1>scissor</h1>
-                        <img src="/image/scissor.png" alt="" class="character">
-                        <!-- <a href="https://www.flaticon.com/free-icons/scissor" title="scissor icons">Scissor icons created by Freepik - Flaticon</a> -->
+                </div>
+
+                <h1 class="vs">VS</h1>
+
+                <div class="flex container-character">
+                    <h1>COMPUTER</h1>
+                    <img src="/image/computer.png" alt="" class="character">
+                    <!-- <a href="https://www.flaticon.com/free-icons/robot" title="robot icons">Robot icons created by Good Ware - Flaticon</a> -->
+                    <h1 id="computerScore">0</h1>
+
+                    <div class="flex container-pick" id="computer-choice">
+                        <div class="flex container-option computer" id="computer-rock">
+                            <h1>rock</h1>
+                            <img src="/image/rock.png" alt="" class="character">
+                            <!-- <a href="https://www.flaticon.com/free-icons/rock" title="rock icons">Rock icons created by Nadiinko - Flaticon</a> -->
+                        </div>
+                        <div class="flex container-option computer" id="computer-paper">
+                            <h1>paper</h1>
+                            <img src="/image/paper.png" alt="" class="character">
+                            <!-- <a href="https://www.flaticon.com/free-icons/paper" title="paper icons">Paper icons created by Freepik - Flaticon</a> -->
+                        </div>
+                        <div class="flex container-option computer" id="computer-scissor">
+                            <h1>scissor</h1>
+                            <img src="/image/scissor.png" alt="" class="character">
+                            <!-- <a href="https://www.flaticon.com/free-icons/scissor" title="scissor icons">Scissor icons created by Freepik - Flaticon</a> -->
+                        </div>
                     </div>
                 </div>
             </div>
+            <h1 id="text-announcement"></h1>
+        </div>
 
-            <h1 class="vs">VS</h1>
-
-            <div class="flex container-character">
-                <h1>COMPUTER</h1>
-                <img src="/image/computer.png" alt="" class="character">
-                <!-- <a href="https://www.flaticon.com/free-icons/robot" title="robot icons">Robot icons created by Good Ware - Flaticon</a> -->
-                <h1 id="computerScore">0</h1>
-
-                <div class="flex container-pick">
-                    <div class="flex container-option">
-                        <h1>rock</h1>
-                        <img src="/image/rock.png" alt="" class="character">
-                        <!-- <a href="https://www.flaticon.com/free-icons/rock" title="rock icons">Rock icons created by Nadiinko - Flaticon</a> -->
-                    </div>
-                    <div class="flex container-option">
-                        <h1>paper</h1>
-                        <img src="/image/paper.png" alt="" class="character">
-                        <!-- <a href="https://www.flaticon.com/free-icons/paper" title="paper icons">Paper icons created by Freepik - Flaticon</a> -->
-                    </div>
-                    <div class="flex container-option">
-                        <h1>scissor</h1>
-                        <img src="/image/scissor.png" alt="" class="character">
-                        <!-- <a href="https://www.flaticon.com/free-icons/scissor" title="scissor icons">Scissor icons created by Freepik - Flaticon</a> -->
-                    </div>
-                </div>
-
+        <div class="flex winner-container" id="winner-screen">
+            <h1 id="winner-announcement"></h1>
+            <img src="" alt="" id="winner-image" >
+            <div id="reset-button">
+                <h1>Play Again</h1>
             </div>
         </div>
 
