@@ -16,6 +16,24 @@ body {
 	display: flex;
 }
 
+.info-container {
+    display: flex;
+    justify-content: right;
+    margin-right: 3rem;
+    margin-top: 1.5rem;
+}
+
+.info {
+	background-color: black;
+    padding: 0.3rem 1.2rem;
+    border-radius: 50px;
+    border: solid hsl(0, 8%, 26%) 5px;
+}
+
+.info > h1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 .container-title {
 	flex-direction: column;
 	align-items: center;
