@@ -14,6 +14,8 @@ const winnerScreen = document.getElementById('winner-screen');
 const winnerAnnouncement = document.getElementById('winner-announcement');
 const winnerImage = document.getElementById('winner-image');
 const resetButton = document.getElementById('reset-button');
+const infoButton = document.getElementById('info-btn')
+const infoBox = document.getElementById('info-box')
 let playerScore = 0;
 let computerScore = 0;
 
@@ -78,6 +80,7 @@ function endGame() {
 }
 
 Array.from(playerChoice.children).forEach(choice => choice.addEventListener('click', () => playRound(choice)));
+
 resetButton.addEventListener('click', () => {
     gameScreen.style.display = 'block';
     winnerScreen.style.display = 'none';
@@ -88,3 +91,7 @@ resetButton.addEventListener('click', () => {
     announcementText.textContent = ''
     resetAnimation()
 });
+
+infoButton.addEventListener('click', () => {
+    infoBox.style.display = 'flex'
+})
