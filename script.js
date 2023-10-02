@@ -14,8 +14,8 @@ const winnerScreen = document.getElementById('winner-screen');
 const winnerAnnouncement = document.getElementById('winner-announcement');
 const winnerImage = document.getElementById('winner-image');
 const resetButton = document.getElementById('reset-button');
-const infoButton = document.getElementById('info-btn')
-const infoBox = document.getElementById('info-box')
+const infoButton = document.getElementById('info-btn');
+const infoBox = document.getElementById('info-box');
 let playerScore = 0;
 let computerScore = 0;
 
@@ -88,10 +88,16 @@ resetButton.addEventListener('click', () => {
     computerScore = 0;
     playerScoreCounter.textContent = playerScore;
     computerScoreCounter.textContent = computerScore;
-    announcementText.textContent = ''
-    resetAnimation()
+    announcementText.textContent = '';
+    resetAnimation();
 });
 
 infoButton.addEventListener('click', () => {
-    infoBox.style.display = 'flex'
-})
+    infoBox.style.display = 'flex';
+});
+
+window.addEventListener('click', (e) => {
+    if (e.target.closest('#info-btn') !== infoButton && e.target.closest('#info-box') !== infoBox) {
+        infoBox.style.display = 'none';
+    }
+});
